@@ -96,15 +96,15 @@ def analyze(contents, number_of_line, debug):
     return _res
 
 
-debug = False
-contents = None
-try:
-    with open(sys.argv[1], encoding="utf-8") as f:
-        contents = f.read()
-    if(sys.argv[3] == '-d'):
-        debug = True
-except:
-    pass
-res = analyze(contents, int(sys.argv[2]),debug)
-for i in res:
-    print(i)
+#debug = False
+#contents = None
+#try:
+#    with open(sys.argv[1], encoding="utf-8") as f:
+#        contents = f.read()
+#    if(sys.argv[3] == '-d'):
+#        debug = True
+#except:
+#    pass
+#res = analyze(contents, int(sys.argv[2]),debug)
+#for i in res:
+#    print(i)

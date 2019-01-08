@@ -45,7 +45,7 @@ async def on_message(message):
                 msg = talked_content[message.channel.id]
                 del(talked_content[message.channel.id])
                 summarize = sdoc.analyze(msg,5,False)
-                msg += "Summarized of these proceedings\n"
+                msg += "\n\nSummarized of these proceedings\n\n"
                 for i in summarize:
                     msg += i + "\n"
                 with open("out.txt", mode='w') as f:
@@ -55,6 +55,6 @@ async def on_message(message):
         if(talking[message.channel.id]):
             if(not message.channel.id in talked_content):
                 talked_content[message.channel.id] = ""
-            talked_content[message.channel.id] += message.author.user + ": " + message.content + "\n"
+            talked_content[message.channel.id] += message.author.name + ": " + message.content + "\n"
 
 client.run(BOT_TOKEN)
